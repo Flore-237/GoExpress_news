@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "805063861437",
+    "project_id": "goexpress-18bb5",
+    "storage_bucket": "goexpress-18bb5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805063861437:android:da9f68a8a689fe8f4103d4",
+        "android_client_info": {
+          "package_name": "com.example.goexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcoaYf0LIbbQjM0mPo8v0SsFHpPxUAi4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805063861437:android:cf2ce410a20c19c54103d4",
+        "android_client_info": {
+          "package_name": "com.goexpress"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcoaYf0LIbbQjM0mPo8v0SsFHpPxUAi4w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
