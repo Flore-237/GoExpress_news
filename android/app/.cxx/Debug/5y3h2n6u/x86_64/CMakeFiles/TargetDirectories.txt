@@ -1,0 +1,2 @@
+D:/ICT301/GoExpress_Mobile/android/app/.cxx/Debug/5y3h2n6u/x86_64/CMakeFiles/edit_cache.dir
+D:/ICT301/GoExpress_Mobile/android/app/.cxx/Debug/5y3h2n6u/x86_64/CMakeFiles/rebuild_cache.dir

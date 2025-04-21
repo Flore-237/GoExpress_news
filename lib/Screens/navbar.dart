@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:go_express/Screens/profile_page.dart';
-import 'package:go_express/Screens/settings_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:go_express/Screens/CustumerSection/settings_page.dart';
 
+import 'CustumerSection/profile_page.dart'; // Importez Firebase Auth
 
 class Navbar extends StatelessWidget {
   const Navbar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Drawer(
+    return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -26,34 +27,43 @@ class Navbar extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.account_circle_outlined),
-            title: const Text('My account'),
+            title: const Text('Mon compte'),
             onTap: () {
-              Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>const ProfilePage()));
+              String userId = FirebaseAuth.instance.currentUser?.uid ?? '';
+              Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (_, __, ___) => ProfileWidget(),
+                ),
+              );
             },
           ),
           const Divider(),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+            title: const Text('Paramètres'),
             onTap: () {
-              Navigator.push(context, PageRouteBuilder(pageBuilder: (_,__,___)=>SettingsPage()));
+              Navigator.push(context, PageRouteBuilder(pageBuilder: (_, __, ___) => SettingsPage()));
             },
-          ),ListTile(
+          ),
+          ListTile(
             leading: const Icon(Icons.message),
-            title: const Text('FAQ and Comment'),
+            title: const Text('FAQ et Commentaire'),
             onTap: () {},
-          ),ListTile(
+          ),
+          ListTile(
             leading: const Icon(Icons.share),
-            title: const Text('Share'),
+            title: const Text('Partager'),
             onTap: () {},
-          ),ListTile(
+          ),
+          ListTile(
             leading: const Icon(Icons.help),
-            title: const Text('Contact us'),
+            title: const Text('Contactez-nous'),
             onTap: () {},
           ),
           ListTile(
             leading: const Icon(Icons.login),
-            title: const Text('Login'),
+            title: const Text('Se connecter'),
             onTap: () {},
           ),
         ],
